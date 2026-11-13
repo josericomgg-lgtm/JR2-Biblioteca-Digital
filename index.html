@@ -1,13 +1,43 @@
+
 <!doctype html>
-<html lang="en">
+<html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#21170f" />
+    <meta name="description" content="JR² Biblioteca Digital. Explora y disfruta de nuevos libros." />
+
+    <link rel="icon" type="image/svg+xml" href="/JR2-Biblioteca-Digital/favicon.svg" />
+
+    <link
+      rel="manifest"
+      href="/JR2-Biblioteca-Digital/manifest.json"
+    />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="JR² Biblioteca" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
     <title>JR² Biblioteca Digital</title>
   </head>
+
   <body>
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register(
+            "/JR2-Biblioteca-Digital/sw.js"
+          ).catch((error) => {
+            console.error("Error al registrar la PWA:", error);
+          });
+        });
+      }
+    </script>
   </body>
 </html>
