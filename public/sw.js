@@ -1,16 +1,16 @@
 
-const CACHE_NAME = "jr2-biblioteca-v1";
-
+const CACHE_NAME = "jr2-biblioteca-v2";
 const BASE_PATH = "/JR2-Biblioteca-Digital/";
 
 const ARCHIVOS_BASE = [
   BASE_PATH,
   `${BASE_PATH}manifest.json`,
   `${BASE_PATH}favicon.svg`,
-  `${BASE_PATH}icons.svg`
+  `${BASE_PATH}icons.svg`,
+  `${BASE_PATH}icon-192.png`,
+  `${BASE_PATH}icon-512.png`
 ];
 
-// INSTALACIÓN
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
@@ -20,7 +20,6 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// ACTIVACIÓN Y LIMPIEZA DE CACHÉS ANTIGUAS
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then(async (nombres) => {
@@ -33,43 +32,33 @@ self.addEventListener("activate", (event) => {
           )
           .map((nombre) => caches.delete(nombre))
       );
-
       await self.clients.claim();
     })
   );
 });
 
-// PETICIONES DE LA APLICACIÓN
 self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = new URL(request.url);
 
-  // Solo manejar solicitudes GET del mismo origen.
   if (
     request.method !== "GET" ||
-    url.origin !== self.location.origin
+    url.origin !== self.location.origin ||
+    !url.pathname.startsWith(BASE_PATH)
   ) {
     return;
   }
 
-  // No interceptar Firebase, API ni archivos externos.
-  if (!url.pathname.startsWith(BASE_PATH)) {
-    return;
-  }
-
-  // Navegación: intentar red y utilizar caché como respaldo.
   if (request.mode === "navigate") {
     event.respondWith(
       fetch(request)
         .then((response) => {
           if (response.ok) {
             const copia = response.clone();
-
             caches.open(CACHE_NAME).then((cache) => {
               cache.put(request, copia);
             });
           }
-
           return response;
         })
         .catch(async () => {
@@ -79,11 +68,9 @@ self.addEventListener("fetch", (event) => {
           );
         })
     );
-
     return;
   }
 
-  // Recursos estáticos: caché primero y red como respaldo.
   event.respondWith(
     caches.match(request).then(async (guardado) => {
       if (guardado) return guardado;
@@ -93,7 +80,6 @@ self.addEventListener("fetch", (event) => {
 
         if (response.ok) {
           const copia = response.clone();
-
           const cache = await caches.open(CACHE_NAME);
           await cache.put(request, copia);
         }
