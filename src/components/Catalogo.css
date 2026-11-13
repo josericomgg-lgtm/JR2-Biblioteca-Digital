@@ -1,0 +1,473 @@
+.catalog-page {
+    min-height: 100vh;
+    background: #100d19;
+    color: #f7f3ff;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
+}
+
+.catalog-header {
+    height: 76px;
+    padding: 0 clamp(18px, 5vw, 72px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    background: #151020
+}
+
+.catalog-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.catalog-brand-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #7955d8, #49308e);
+    color: white
+}
+
+.catalog-brand strong,
+.catalog-brand small {
+    display: block
+}
+
+.catalog-brand strong {
+    font-size: 16px
+}
+
+.catalog-brand small {
+    font-size: 11px;
+    color: #a99fba;
+    margin-top: 3px
+}
+
+.catalog-header-label,
+.catalog-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #d8b96e;
+    font-weight: 800
+}
+
+.catalog-main {
+    width: min(1180px, calc(100% - 36px));
+    margin: auto
+}
+
+.catalog-hero {
+    text-align: center;
+    padding: 66px 0 38px
+}
+
+.catalog-hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    letter-spacing: -1.5px;
+    margin: 13px 0 10px
+}
+
+.catalog-hero>p {
+    color: #aaa1b7;
+    margin: 0 auto 25px;
+    max-width: 620px;
+    line-height: 1.6
+}
+
+.catalog-search {
+    width: min(620px, 100%);
+    height: 52px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px;
+    background: #201a2c;
+    border: 1px solid #393047;
+    border-radius: 13px;
+    color: #a99fba
+}
+
+.catalog-search input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 14px
+}
+
+.catalog-search input::placeholder {
+    color: #81788e
+}
+
+.catalog-search button {
+    background: none;
+    border: 0;
+    color: #c9bfd8;
+    cursor: pointer
+}
+
+.catalog-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin: 12px 0 25px
+}
+
+.catalog-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.catalog-tabs button,
+.catalog-controls select {
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 10px;
+    border: 1px solid #393047;
+    background: #1c1727;
+    color: #c9c0d5;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer
+}
+
+.catalog-tabs button.selected {
+    background: #6747b5;
+    border-color: #8061ce;
+    color: white
+}
+
+.catalog-controls select {
+    min-width: 190px
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    gap: 22px;
+    padding-bottom: 55px
+}
+
+.catalog-card {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 15px;
+    background: #191423;
+    transition: transform .2s, border-color .2s
+}
+
+.catalog-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(191, 161, 238, .4)
+}
+
+.catalog-cover {
+    height: 245px;
+    position: relative;
+    background: #241c33;
+    overflow: hidden
+}
+
+.catalog-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.catalog-cover-placeholder {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: #8067ad
+}
+
+.catalog-type {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: rgba(16, 13, 25, .88);
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #e5c77d;
+    font-weight: 800
+}
+
+.catalog-card-body {
+    padding: 16px
+}
+
+.catalog-category {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d5b66e
+}
+
+.catalog-card h2 {
+    font-size: 17px;
+    line-height: 1.35;
+    margin: 8px 0
+}
+
+.catalog-author {
+    font-size: 12px;
+    color: #c0b2d7;
+    margin: 0 0 8px
+}
+
+.catalog-description {
+    font-size: 12px;
+    color: #9e95aa;
+    line-height: 1.55;
+    min-height: 38px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
+.catalog-open-button {
+    width: 100%;
+    height: 40px;
+    margin-top: 12px;
+    border: 0;
+    border-radius: 9px;
+    background: #6949b9;
+    color: white;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.catalog-open-button:disabled {
+    background: #393344;
+    color: #81798b;
+    cursor: not-allowed
+}
+
+.catalog-empty {
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #a99fba;
+    gap: 10px
+}
+
+.catalog-empty h2 {
+    font-size: 19px;
+    color: #eee8f7;
+    margin: 5px 0 0
+}
+
+.catalog-empty p {
+    font-size: 13px;
+    margin: 0
+}
+
+.catalog-loader {
+    width: 28px;
+    height: 28px;
+    border: 3px solid #493b60;
+    border-top-color: #c7a6ff;
+    border-radius: 50%;
+    animation: catalog-spin .8s linear infinite
+}
+
+@keyframes catalog-spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.catalog-alert {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 15px;
+    border: 1px solid #754b53;
+    background: #321e29;
+    color: #f0c7cd;
+    border-radius: 10px;
+    font-size: 13px;
+    margin: 18px 0
+}
+
+.catalog-footer {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, .07);
+    padding: 22px;
+    color: #81788e;
+    font-size: 11px
+}
+
+.reader-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(5, 4, 9, .94);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.reader-window {
+    width: min(1200px, 100%);
+    height: min(900px, 100%);
+    background: #171220;
+    border: 1px solid #40354f;
+    border-radius: 13px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column
+}
+
+.reader-toolbar {
+    min-height: 58px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #393047
+}
+
+.reader-toolbar strong {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px
+}
+
+.reader-back,
+.reader-close {
+    border: 0;
+    background: transparent;
+    color: #e9e0f5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px
+}
+
+.reader-back {
+    font-size: 12px
+}
+
+.reader-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #fff
+}
+
+.reader-close {
+    padding: 8px
+}
+
+@media(max-width:600px) {
+    .catalog-header {
+        height: 66px
+    }
+
+    .catalog-header-label {
+        font-size: 8px;
+        letter-spacing: 1px
+    }
+
+    .catalog-hero {
+        padding: 48px 0 28px
+    }
+
+    .catalog-controls {
+        align-items: stretch;
+        flex-direction: column
+    }
+
+    .catalog-controls select {
+        width: 100%
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px
+    }
+
+    .catalog-cover {
+        height: 190px
+    }
+
+    .catalog-card-body {
+        padding: 12px
+    }
+
+    .catalog-card h2 {
+        font-size: 14px
+    }
+
+    .catalog-description {
+        font-size: 11px
+    }
+
+    .reader-overlay {
+        padding: 0
+    }
+
+    .reader-window {
+        height: 100%;
+        border-radius: 0
+    }
+
+    .reader-toolbar {
+        gap: 8px;
+        padding: 0 9px
+    }
+
+    .reader-back {
+        font-size: 0
+    }
+
+    .reader-back svg {
+        width: 21px;
+        height: 21px
+    }
+}
+
+.reader-external {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.reader-external:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.reader-external {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.reader-external:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
