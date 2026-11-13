@@ -12,7 +12,8 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   // El panel administrativo se abre desde /admin
-  const esAdmin = window.location.pathname.startsWith("/admin");
+const ruta = window.location.pathname.replace("/JR2-Biblioteca-Digital", "");
+const esAdmin = ruta.startsWith("/admin");
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
