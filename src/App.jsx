@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "./services/firebase";
 
-import Login from "./pages/Login.jsx";
+import Login from "./pages/login.jsx";
 import Dashboard from "./components/Dashboard";
 import Catalogo from "./components/Catalogo";
 
