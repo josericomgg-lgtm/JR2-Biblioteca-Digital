@@ -1,0 +1,22 @@
+
+{
+  "id": "/JR2-Biblioteca-Digital/",
+  "name": "JR² Biblioteca Digital",
+  "short_name": "JR² Biblioteca",
+  "description": "Tu biblioteca digital. Explora y disfruta de nuevos libros.",
+  "lang": "es-MX",
+  "start_url": "/JR2-Biblioteca-Digital/",
+  "scope": "/JR2-Biblioteca-Digital/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#21170f",
+  "theme_color": "#21170f",
+  "icons": [
+    {
+      "src": "/JR2-Biblioteca-Digital/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
