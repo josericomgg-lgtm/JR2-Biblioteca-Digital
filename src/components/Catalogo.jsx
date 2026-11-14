@@ -370,7 +370,76 @@ export default function Catalogo() {
             </div>
           )}
         </section>
+        {/* SUGERENCIAS Y APOYO A LA BIBLIOTECA */}
+        <section className="premium-support-section" id="apoyar">
+          <div className="premium-support-heading">
+            <span className="premium-eyebrow">
+              <Sparkles size={13} />
+              HAGAMOS CRECER ESTA BIBLIOTECA
+            </span>
 
+            <h2>Tu apoyo también cuenta</h2>
+
+            <p>
+              ¿Hay algún libro que te gustaría encontrar aquí?
+              También puedes ayudar a que este espacio siga creciendo.
+            </p>
+          </div>
+
+          <div className="premium-support-grid">
+            <article className="premium-support-card">
+              <div className="premium-support-icon">📚</div>
+              <h3>Sugiere un libro</h3>
+              <p>
+                Cuéntanos qué libro te gustaría ver próximamente
+                en nuestra biblioteca.
+              </p>
+              <a
+                className="premium-support-button"
+                href="mailto:josericomgg@gmail.com?subject=Sugerencia%20de%20libro%20-%20JR%C2%B2%20Biblioteca%20Digital"
+              >
+                Enviar sugerencia
+                <ArrowRight size={16} />
+              </a>
+            </article>
+
+            <article className="premium-support-card">
+              <div className="premium-support-icon">💛</div>
+              <h3>Apoya con PayPal</h3>
+              <p>
+                Tu colaboración puede ayudar a mantener y mejorar
+                este espacio de lectura.
+              </p>
+              <button
+                className="premium-support-button premium-support-disabled"
+                type="button"
+                disabled
+              >
+                Próximamente
+              </button>
+            </article>
+
+            <article className="premium-support-card">
+              <div className="premium-support-icon">☕</div>
+              <h3>Apoya con Mercado Pago</h3>
+              <p>
+                Cada aporte cuenta para seguir haciendo crecer
+                nuestra colección digital.
+              </p>
+              <button
+                className="premium-support-button premium-support-disabled"
+                type="button"
+                disabled
+              >
+                Próximamente
+              </button>
+            </article>
+          </div>
+
+          <p className="premium-support-thanks">
+            Gracias por formar parte de JR² Biblioteca Digital.
+          </p>
+        </section>
         {/* BÚSQUEDA Y FILTROS */}
         <section className="premium-search-section" id="biblioteca">
           <div className="premium-section-heading">
