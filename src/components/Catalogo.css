@@ -1438,3 +1438,62 @@
     padding: 21px 17px;
   }
 }
+/* AJUSTE COMPACTO PARA TELÉFONOS */
+
+@media (max-width: 600px) {
+  .premium-support-section {
+    padding: 25px 0 22px;
+  }
+
+  .premium-support-heading {
+    margin-bottom: 16px;
+  }
+
+  .premium-support-heading h2 {
+    font-size: 19px;
+    margin: 7px 0;
+  }
+
+  .premium-support-heading p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .premium-support-grid {
+    gap: 10px;
+  }
+
+  .premium-support-card {
+    padding: 13px 14px;
+    border-radius: 10px;
+  }
+
+  .premium-support-icon {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 7px;
+    border-radius: 9px;
+    font-size: 17px;
+  }
+
+  .premium-support-card h3 {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .premium-support-card p {
+    font-size: 10px;
+    line-height: 1.45;
+    margin-bottom: 10px;
+  }
+
+  .premium-support-button {
+    min-height: 33px;
+    font-size: 10px;
+  }
+
+  .premium-support-thanks {
+    margin-top: 15px;
+    font-size: 10px;
+  }
+}
