@@ -388,8 +388,8 @@ export default function Catalogo() {
 
           <div className="premium-support-grid">
             <article className="premium-support-card">
-              <div className="premium-support-icon">📚</div>
-              <h3>Sugiere un libro</h3>
+          
+            <h3>Sugiere un libro</h3>
               <p>
                 Cuéntanos qué libro te gustaría ver próximamente
                 en nuestra biblioteca.
@@ -404,7 +404,7 @@ export default function Catalogo() {
             </article>
 
             <article className="premium-support-card">
-              <div className="premium-support-icon">💛</div>
+              
               <h3>Apoya con PayPal</h3>
               <p>
                 Tu colaboración puede ayudar a mantener y mejorar
@@ -420,7 +420,7 @@ export default function Catalogo() {
             </article>
 
             <article className="premium-support-card">
-              <div className="premium-support-icon">☕</div>
+              
               <h3>Apoya con Mercado Pago</h3>
               <p>
                 Cada aporte cuenta para seguir haciendo crecer
