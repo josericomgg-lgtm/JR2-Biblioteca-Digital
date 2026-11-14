@@ -1497,3 +1497,57 @@
     font-size: 10px;
   }
 }
+/* DISEÑO MINIMALISTA DE APOYO */
+
+.premium-support-grid {
+  gap: 10px;
+}
+
+.premium-support-card {
+  padding: 17px 22px;
+}
+
+.premium-support-card h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.premium-support-card p {
+  min-height: auto;
+  margin: 0 0 12px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.premium-support-button {
+  min-height: 36px;
+}
+
+@media (max-width: 600px) {
+  .premium-support-section {
+    padding: 24px 0;
+  }
+
+  .premium-support-grid {
+    gap: 8px;
+  }
+
+  .premium-support-card {
+    padding: 13px 15px;
+  }
+
+  .premium-support-card h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .premium-support-card p {
+    font-size: 10px;
+    margin-bottom: 9px;
+  }
+
+  .premium-support-button {
+    min-height: 32px;
+    font-size: 10px;
+  }
+}
