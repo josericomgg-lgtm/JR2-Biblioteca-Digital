@@ -403,37 +403,41 @@ export default function Catalogo() {
               </a>
             </article>
 
+            
             <article className="premium-support-card">
-              
               <h3>Apoya con PayPal</h3>
               <p>
                 Tu colaboración puede ayudar a mantener y mejorar
                 este espacio de lectura.
               </p>
-              <button
-                className="premium-support-button premium-support-disabled"
-                type="button"
-                disabled
+              <a
+                className="premium-support-button"
+                href="https://paypal.me/JoseBaizabal"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Próximamente
-              </button>
+                Donar con PayPal
+                <ArrowRight size={16} />
+              </a>
             </article>
 
             <article className="premium-support-card">
-              
               <h3>Apoya con Mercado Pago</h3>
               <p>
                 Cada aporte cuenta para seguir haciendo crecer
                 nuestra colección digital.
               </p>
-              <button
-                className="premium-support-button premium-support-disabled"
-                type="button"
-                disabled
+              <a
+                className="premium-support-button"
+                href="https://link.mercadopago.com.mx/jr2digitalbook"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Próximamente
-              </button>
+                Donar con Mercado Pago
+                <ArrowRight size={16} />
+              </a>
             </article>
+
           </div>
 
           <p className="premium-support-thanks">
