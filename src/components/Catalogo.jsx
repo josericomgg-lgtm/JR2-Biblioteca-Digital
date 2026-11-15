@@ -429,7 +429,7 @@ export default function Catalogo() {
               </p>
               <a
                 className="premium-support-button"
-                href="https://link.mercadopago.com.mx/jr2digitalbook"
+                href="https://https://link.mercadopago.com.mx/ayudandoperritos"
                 target="_blank"
                 rel="noopener noreferrer"
               >
